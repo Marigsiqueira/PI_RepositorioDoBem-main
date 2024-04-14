@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho - Ícone de menu e botões */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    color: white;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.img-menu{
+    width: 50%;
+}
+
+.space {
+    flex-grow: 1;
+}
+
+button {
+    width: 120px; 
+    height: 40px;
+    padding: 8px 16px;
+    margin-right: 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: #FFD100;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #916a00;
+}
+
+/* Sessão 1 com logo */
+
+.section-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-logo{
+    width: 400px; 
+    height: 390px;
+
+}
+
+
+/* Sessão Conteúdo Principal */
+
+.section-main {
+    margin-top: 20px;
+    display: flex;
+    background-color: #FFD100;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    
+    
+}
+
+.column img {
+    max-width: 100%; 
+    height: auto; 
+    width: 190px; 
+}
+
+.section-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.top-content, .bottom-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.left-image, .right-image {
+    width: 48%; 
+}
+
+.left-text, .right-text {
+    width: 48%; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Final da Página */
+
+.bottom-page{
+    display: flex;
+    background-color: #FFD100;
+    padding: 5px;
+    
+}
+
+.text-bottom-page{
+    margin-left: 50%;
+}
