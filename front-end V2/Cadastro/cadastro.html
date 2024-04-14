@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src=></script>
+</head>
+<body>
+    <div id="corpo">
+        <div id="esquerda"></div>
+
+        <div id="direita">
+            <form id="form">
+                <div id="inputinhos">
+                    <div class="input-box">
+                        <img src="img/NOME.png" alt="Nome">
+                        <input id="nomeEmpresa" class="nomeEmpresa" name="NOME" type="text" placeholder="Nome" required/>
+                    </div>
+                    <div class="input-box">
+                        <img src="img/EMAIL.png" alt="email">
+                        <input id="email"  class="email" name="email" type="text" placeholder="E-mail" required/>
+                    </div>
+                    <div class="input-box">
+                        <img src="img/CNPJ.png" alt="cnpj">
+                        <input id="cnpj" class="cnpj"  name="cnpj" type="TEXT" maxlength="15"  placeholder="CNPJ" required />
+                    </div>
+                    <div class="input-box">
+                        <img src="img/CEP.png" alt="cep">
+                        <input class="cep"  type="text" id="cep" name="cep" maxlength="9" pattern="\d{5}-?\d{3}" placeholder="CEP" required>
+                    </div>
+                    <div class="input-box">
+                        <img src="img/SENHA.png" alt="senha">
+                        <input id="senha" class="senha" name="senha" type="password" placeholder="Senha" required/>
+                    </div>
+                </div>
+                <div id="btn">
+                    <button type="submit" onclick= "cadastrar()">Cadastre-se</button>
+                    <a href="../login/login.html">Já possui uma conta?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+    function cadastrar(){
+       
+    const inomeEmpresa = document.getElementById("nomeEmpresa").value;
+    const iemail = document.getElementById("email").value;
+    const icnpj = document.getElementById("cnpj").value;
+    const icep = document.getElementById("cep").value;
+    const isenha = document.getElementById("senha").value;
+
+    console.log('Botao de cadastro funcionando');
+
+    fetch('http://localhost:8080/addUser',
+    {
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+        },
+        method: "POST",
+        body: JSON.stringify({
+            nomeEmpresa: inomeEmpresa,
+            email: iemail,
+            cnpj: icnpj,
+            cep: icep,
+            senha: isenha
+        })
+
+    })
+
+    .then(function (res) { console.log(res) })
+    .catch(function (res) { console.log(res) })
+}
+    </script>
+  
+ 
+
+
+
+</body>
+</html>
